@@ -22,7 +22,10 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         ImageView imageView=(ImageView)findViewById(R.id.img);
-        loadSvgWithColor(this, R.raw.sprint, imageView, Color.GREEN);
+        loadSvgWithColor(this, R.raw.inkscape, imageView, getResources().getColor(R.color.green_tint));
+
+        ImageView iconView=(ImageView)findViewById(R.id.icon);
+        loadSvgWithColor(this, R.raw.sprint, iconView, getResources().getColor(R.color.orange_tint));
     }
 
     private static boolean loadSvgWithColor(Context context, int rawId, ImageView imageView, int color){
